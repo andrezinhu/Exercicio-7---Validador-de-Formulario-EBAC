@@ -3,8 +3,8 @@ const form = document.getElementById('formValidacao');
 form.addEventListener('submit', function(e){
     e.preventDefault();
 
-    const numero1 = document.getElementById('Campo A');
-    const numero2 = document.getElementById('Campo B');
+    const numero1 = document.getElementById("Campo A")
+    const numero2 = document.getElementById("Campo B")
 
     const mensagemSucesso = "Parabéns, seu formulario foi validado com sucesso";
     const mensagemFalha = "Infelizmente seu formulario não pode ser validado";
@@ -12,7 +12,7 @@ form.addEventListener('submit', function(e){
     const containermensagemSucesso = document.querySelector('#mensagemSucesso');
     const containermensagemFalha = document.querySelector('#mensagemFalha');
 
-    if(numero1.value > numero2.value){
+    if(numero1.valueAsNumber >= numero2.valueAsNumber){
         containermensagemSucesso.style.display = 'none'
         const containermensagemFalha = document.querySelector('#mensagemFalha');
         containermensagemFalha.innerHTML = mensagemFalha;
